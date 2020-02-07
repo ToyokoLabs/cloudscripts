@@ -2,7 +2,6 @@ from google.cloud import speech_v1
 from google.cloud.speech_v1 import enums
 
 
-
 def sample_long_running_recognize(storage_uri):
     """
     Transcribe long audio file from Cloud Storage using asynchronous speech
@@ -46,5 +45,6 @@ def sample_long_running_recognize(storage_uri):
                 textout.write(alternative.transcript)
             #print(u"Transcript: {}".format(alternative.transcript))
 
-# storage_uri = 'gs://XXXX/brooklyn_bridge.raw'
+storage_uri = 'gs://XXXX/brooklyn_bridge.wav'
+
 sample_long_running_recognize(storage_uri)
